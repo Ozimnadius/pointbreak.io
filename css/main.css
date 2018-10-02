@@ -448,18 +448,18 @@ button {
 
 /*-----------------SECTION-MAIN--------------------*/
 .main__first {
-  background-image: url(/images/bg/bg-first.jpg);
+  background-image: url(../images/bg/bg-first.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
   position: relative; }
 
 .main__second {
-  background-image: url(/images/bg/bg-second2.jpg);
+  background-image: url(../images/bg/bg-second2.jpg);
   background-repeat: no-repeat;
   background-position: center bottom; }
 
 .main__third {
-  background-image: url(/images/bg/bg-third.jpg);
+  background-image: url(../images/bg/bg-third.jpg);
   background-repeat: no-repeat;
   background-position: center bottom; }
 
