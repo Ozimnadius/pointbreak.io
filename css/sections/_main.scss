@@ -1,0 +1,21 @@
+.main {
+  
+  &__first {
+    background-image: url(/images/bg/bg-first.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+  }
+
+  &__second {
+    background-image: url(/images/bg/bg-second2.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  &__third {
+    background-image: url(/images/bg/bg-third.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+}

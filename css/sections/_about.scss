@@ -1,0 +1,138 @@
+.about {
+
+  &__pointbreak {
+    top: 120px;
+  }
+
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  /* left */
+  &__left {
+    @include col;
+    @include size(12);
+    padding-top: 30px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: lh(18px, 28px);
+    margin-bottom: 30px;
+  }
+  &__text2 {
+    @extend .about__text;
+    font-weight: 600;
+    margin-bottom: 75px;
+  }
+
+  &__partners {
+
+  }
+  &__partner {
+    @include col;
+    @include size(6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  /* END left */
+
+  /* right */
+  &__right {
+    @include col;
+    @include size(12);
+  }
+  &__img {
+    position: relative;
+    margin-bottom: 35px;
+  }
+  &__grad {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(241,241,241,1) 0%,rgba(255,255,255,0) 26%,rgba(255,255,255,0) 71%,rgba(241,241,241,1) 100%);
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      background: linear-gradient(to bottom, rgba(241,241,241,1) 0%,rgba(241,241,241,0) 100%);
+    }
+  }
+  &__pic {
+    width: 100%;
+  }
+
+  &__workers {
+    display: flex;
+    justify-content: center;
+  }
+  &__worker {
+    margin-right: 160px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-title {
+      color: $button;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &-prof {
+      color: $Dim-gray2;
+      text-align: center;
+    }
+  }
+
+  &__title2 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+    &:after {
+      width: 100px;
+      height: 6px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+
+
+    &-num {
+      color: $bg;
+      font-size: 130px;
+      letter-spacing: -6.5px;
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      bottom: -13px;
+      line-height: 1;
+    }
+
+    &-title {
+      position: relative;
+      z-index: 20;
+      color: $button;
+      font-size: 18px;
+      font-weight: 700;
+      padding-left: 28px;
+      line-height: lh(18px,24px);
+    }
+  }
+  /* END right */
+}

@@ -1,0 +1,115 @@
+@function rem($size) {
+  $remSize: $size / $font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin fz($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@function lh($size1, $size2) {
+  $lh: $size2 / $size1;
+  @return $lh;
+}
+
+@mixin content() {
+  ul {
+    margin: 1em 0;
+    padding-left: 0;
+    li {
+      list-style: none;
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: $button;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -4.5px;
+      }
+    }
+  }
+
+  ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: myCounter;
+
+    li {
+      position: relative;
+      font-weight: 500;
+      color: $Onyx;
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        counter-increment: myCounter;
+        content:counter(myCounter)'.';
+        margin-right: 35px;
+        opacity: 0.7;
+        color: $button;
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0.67em 0;
+  }
+  h2 {
+    margin: 0.83em 0;
+  }
+  h3 {
+    margin: 1em 0;
+  }
+  h4 {
+    margin: 1.33em 0;
+  }
+  h5 {
+    margin: 1.67em 0;
+  }
+  h5 {
+    margin: 2.33em 0;
+  }
+  p {
+    margin: 1em 0;
+  }
+}
+
+@mixin headers() {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.875rem;
+  }
+  h6 {
+    font-size: 0.75rem;
+  }
+}

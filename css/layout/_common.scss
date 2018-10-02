@@ -1,0 +1,72 @@
+.button {
+  background-color: $button;
+  transition: .3s;
+  color: $bg;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,&.active {
+    background-color: $buttonActive;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 8px;
+    background-color: $button;
+    margin: 0 auto;
+    margin-top: 18px;
+  }
+
+}
+
+.pointbreak {
+  position: absolute;
+  right: calc(100% + 75px);
+
+  @include lg-block {
+    right:calc(100% + 22px);
+  };
+}
+
+.drop {
+  font-weight: 400;
+  font-size: 16px;
+  color: $text;
+  text-transform: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 30px);
+  background-color: rgba($bg,.95);
+  padding: 40px 30px;
+  width: 764px;
+  border-radius: 5px;
+  display: none;
+  cursor: text;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 16px 15px;
+    border-color: transparent transparent rgba($bg,.95) transparent;
+    position: absolute;
+    left: 22px;
+    bottom: 100%;
+
+  }
+}

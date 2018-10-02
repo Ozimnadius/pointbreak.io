@@ -1,0 +1,73 @@
+.first {
+
+  &__pointbreak {
+    top: 70px;
+  }
+
+  &__barrier {
+    @include col;
+    @include size(16);
+    padding: 25px 15px;
+    background-color: rgba($button,.4);
+    margin-left: 0;
+    margin-bottom: 35px;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      top: 100%;
+      height: 50px;
+      width: 100%;
+      position: absolute;
+      display: none;
+    }
+
+    .drop {
+      width: 100%;
+    }
+    
+    &:hover {
+      &:after {
+        display: block;
+      }
+      .drop {
+        display: block;
+      }
+    }
+
+    &-title {
+      text-shadow: 0 0 169px rgba(255, 255, 255, 0.5);
+      color: $bg;
+      font-size: 79px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      color: $White;
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+
+  &__subtitle {
+    @include col;
+    @include size(14);
+    color: $White;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 196px;
+    line-height: 1.42;
+  }
+
+  &__text {
+    @include col;
+    @include size(17);
+    color: $White;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.27;
+  }
+}

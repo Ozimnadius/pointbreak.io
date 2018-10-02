@@ -1,0 +1,63 @@
+//variables
+//fonts
+$font: 'Montserrat', Arial, sans-serif;
+
+//colors
+$Isabelline: #edeeee;
+$White: #feffff;
+$bg: #ffffff;
+$Onyx: #111111;
+$text: #333333;
+$Dim-gray2: #666666;
+$Taupe-gray: #888888;
+$Isabelline2: #eeeeee;
+$Black: #000000;
+$buttonActive: #4ecdc4;
+$Medium-electric-blue: #065686;
+$button: #0a7371;
+$Teal-green: #02605e;
+$Snow: #fafafa;
+$Warm-black: #003a49;
+$Lust: #ed1c24;
+$Pastel-blue: #afc4ca;
+$Lavender-gray: #bfcfd4;
+$Deep-sky-blue: #00afe7;
+$Dim-gray: #646464;
+
+//another
+$font-size: 16px;
+
+//layout
+/*-----------------SECTION-MIXINS--------------------*/
+@import "layout/_mixins";
+/*------------------------SECTION-FONTS----------------*/
+@import "layout/_fonts";
+/*------------------------SECTION-SMART-GRID----------------*/
+@import "layout/_smart-grid";
+/*------------------------SECTION-ADJUSTMENT----------------*/
+@import "layout/_adjustment";
+/*-----------------SECTION-HOVER-ANIM--------------------*/
+@import "layout/_hover-anim";
+/*------------------------SECTION-COMMON----------------*/
+@import "layout/_common";
+
+//sections
+/*------------------------SECTION-HEADER----------------*/
+@import "sections/_header";
+/*-----------------SECTION-MAIN--------------------*/
+@import "sections/_main";
+/*-----------------SECTION-FIRST--------------------*/
+@import "sections/_first";
+/*-----------------SECTION-RESULT--------------------*/
+@import "sections/_res";
+/*-----------------SECTION-ABOUT--------------------*/
+@import "sections/_about";
+/*------------------------SECTION-FOOTER---------------------*/
+@import "sections/_footer";
+
+
+.debug {
+  //@include debug(rgba(0,0,0,0.3), 1px solid red);
+  //z-index: 100;
+  //top: 0;
+}
