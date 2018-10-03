@@ -13,6 +13,9 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
+    @include lg-block{
+      background-size: auto;
+    };
   }
 
 }

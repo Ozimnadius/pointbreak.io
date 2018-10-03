@@ -1,16 +1,25 @@
 .about {
 
   &__content {
-    padding-top: vh(130);
-    padding-bottom: vh(140);
+    padding-top: 130px;
+    padding-bottom: 140px;
+    >.row {
+      position: relative;
+    }
   }
 
   &__pointbreak {
     top: 120px;
+    @include lg-block {
+      top: 260px;
+    };
   }
 
   &__title {
-    margin-bottom: vh(90);
+    margin-bottom: 90px;
+    @include lg-block {
+      margin-bottom: 60px;
+    };
   }
 
   /* left */
@@ -18,21 +27,37 @@
     @include col;
     @include size(12);
     padding-top: 30px;
+    @include size-lg(15);
+    @include lg-block {
+      padding-top: 0;
+      position: relative;
+      z-index: 20;
+    };
   }
 
   &__text {
     font-size: 18px;
     line-height: lh(18px, 28px);
     margin-bottom: 30px;
+    @include lg-block {
+      font-size: 14px;
+      margin-bottom: 17px;
+    };
   }
   &__text2 {
     @extend .about__text;
     font-weight: 600;
     margin-bottom: 75px;
+    @include lg-block {
+      padding-right: 100px;
+      margin-bottom: 50px;
+    };
   }
 
   &__partners {
-
+    @include lg-block {
+      padding-right: 100px;
+    };
   }
   &__partner {
     @include col;
@@ -41,6 +66,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+    @include size-lg(8);
   }
   /* END left */
 
@@ -48,10 +74,21 @@
   &__right {
     @include col;
     @include size(12);
+    @include lg-block {
+      position: absolute;
+      z-index: 10;
+      right: -80px;
+      top: 0;
+      padding-top: 80px;
+    };
+    @include size-lg(15);
   }
   &__img {
     position: relative;
     margin-bottom: 35px;
+    @include lg-block {
+      margin-bottom: 16px;
+    };
   }
   &__grad {
     position: absolute;
@@ -82,6 +119,9 @@
   }
   &__worker {
     margin-right: 160px;
+    @include lg-block {
+      margin-right: 100px;
+    };
 
     &:last-child {
       margin-right: 0;
@@ -101,12 +141,21 @@
 
   &__title2 {
     font-size: 24px;
-    margin-top: vh(40);
-    margin-bottom: vh(100);
+    margin-top: 40px;
+    margin-bottom: 100px;
+    @include lg-block {
+      margin-top: 65px;
+      font-size: 20px;
+      margin-bottom: 50px;
+    };
 
     &:after {
       width: 100px;
       height: 6px;
+      @include lg-block {
+        width: 80px;
+        height: 4px;
+      };
     }
   }
 
@@ -127,6 +176,11 @@
       left: 0;
       bottom: -13px;
       line-height: 1;
+      @include lg-block {
+        position: static;
+        font-size: 50px;
+        margin-bottom: 10px;
+      };
     }
 
     &-title {
@@ -137,6 +191,10 @@
       font-weight: 700;
       padding-left: 28px;
       line-height: lh(18px,24px);
+      @include lg-block {
+        font-size: 12px;
+        padding-left: 0;
+      };
     }
   }
   /* END right */

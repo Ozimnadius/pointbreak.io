@@ -1,9 +1,12 @@
 .header {
   position: absolute;
   z-index: 10;
-  top: vh(50);
+  top: 50px;
   left: 0;
   right: 0;
+  @include lg-block {
+    top: 40px;
+  };
 
   &__row {
     display: flex;
@@ -14,10 +17,68 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
+    @include lg-block {
+      align-items: center;
+    };
   }
 
   &__callorder {
     margin-right: 125px;
+    @include lg-block {
+      display: none;
+    };
+
+    &-button {
+      display: flex;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-bottom-color: $bg;
+      }
+    }
+
+    &-title {
+      font-weight: 500;
+      color: $bg;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-right: 15px;
+    }
+    &-svg {
+      width: 19px;
+      height: 15px;
+      fill: $bg;
+    }
+  }
+
+  &__langs {
+    @include lg-block {
+      margin-right: 60px;
+    };
+  }
+
+  &__call {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: $Warm-black;
+    transition: .3s;
+    @include lg-block {
+      display: flex;
+    };
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &-svg {
+      width: 18px;
+      height: 18px;
+      fill: $Lavender-gray;
+    }
   }
 }
 
@@ -27,9 +88,15 @@
   font-weight: 700;
   line-height: 1.7;
   text-transform: uppercase;
-  width: 505px;
+  max-width: 505px;
   position: relative;
   cursor: pointer;
+
+  @include lg-block {
+    max-width: 445px;
+    font-size: 13px;
+  };
+
   &_blue {
     color: $buttonActive;
   }
@@ -56,30 +123,13 @@
 }
 
 .callorder {
-  display: flex;
-  border-bottom: 1px solid transparent;
 
-  &:hover {
-    border-bottom-color: $bg;
-  }
-
-  &__title {
-    font-weight: 500;
-    color: $bg;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin-right: 15px;
-  }
-  &__svg {
-    width: 19px;
-    height: 15px;
-    fill: $bg;
-  }
 }
 
 .langs {
   display: flex;
 }
+
 .lang {
   color: $Isabelline2;
   font-size: 14px;
