@@ -19,6 +19,7 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
+	.svg-close-dims { width: 612px; height: 612px; }
 	.svg-right-arrow-dims { width: 476.21px; height: 476.21px; }
 	.svg-sprite-dims { width: 0px; height: 0px; }
 </style>
@@ -43,6 +44,7 @@ for further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 612 612" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M612 36.004L576.521.603 306 270.608 35.478.603 0 36.004l270.522 270.007L0 575.997l35.478 35.4L306 341.411l270.521 269.986 35.479-35.4-270.541-269.986z"/></symbol>
 		<symbol viewBox="0 0 476.213 476.213" id="right-arrow" xmlns="http://www.w3.org/2000/svg"><path d="M345.606 107.5l-21.212 21.213 94.393 94.394H0v30h418.787L324.394 347.5l21.212 21.213 130.607-130.607z"/></symbol>
 		<symbol viewBox="0 0 0 0" id="sprite" xmlns="http://www.w3.org/2000/svg"/>
 </svg>
@@ -74,6 +76,17 @@ embedded above. They may be styled via CSS.
 			<h3>A) Inline SVG with embedded sprite</h3>
 			<ul>
 
+				<li title="close">
+					<div class="icon-box">
+						
+						<!-- close -->
+						<svg class="svg-close-dims">
+							<use xlink:href="#close"></use>
+						</svg>
+						
+					</div>
+					<h2>close</h2>
+				</li>
 				<li title="right-arrow">
 					<div class="icon-box">
 						
@@ -117,6 +130,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 				
+				<li title="close">
+					<div class="icon-box">
+						
+						<!-- close -->
+						<svg class="svg-close-dims">
+							<use xlink:href="sprite.svg#close"></use>
+						</svg>
+						
+					</div>
+					<h2>close</h2>
+				</li>
 				<li title="right-arrow">
 					<div class="icon-box">
 						
@@ -147,7 +171,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Mon, 01 Oct 2018 15:03:13 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Tue, 02 Oct 2018 14:41:53 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

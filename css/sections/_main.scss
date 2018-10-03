@@ -5,17 +5,14 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     position: relative;
+    background-size: cover;
   }
 
   &__second {
     background-image: url(../images/bg/bg-second2.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
+    background-size: cover;
   }
 
-  &__third {
-    background-image: url(../images/bg/bg-third.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-  }
 }

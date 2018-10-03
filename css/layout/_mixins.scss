@@ -13,6 +13,10 @@
   @return $lh;
 }
 
+@function vh($size) {
+  @return $size/$vh *100*1vh;
+}
+
 @mixin content() {
   ul {
     margin: 1em 0;
@@ -43,6 +47,7 @@
   }
 
   ol {
+    margin: 1em 0;
     padding-left: 0;
     list-style: none;
     counter-reset: myCounter;

@@ -1,5 +1,10 @@
 .first {
 
+  &__content {
+    padding-top: vh(270);
+    padding-bottom: vh(310);
+  }
+
   &__pointbreak {
     top: 70px;
   }
@@ -58,7 +63,7 @@
     font-size: 21px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 196px;
+    margin-bottom: vh(196);
     line-height: 1.42;
   }
 

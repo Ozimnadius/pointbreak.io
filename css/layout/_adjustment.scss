@@ -28,7 +28,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -65,13 +65,14 @@ ul {
 }
 
 section {
-  height: 100vh;
-  >.container {
+  min-height: 100vh;
+  //overflow: hidden;
+  /*>.container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+  }*/
 }
 
 a {

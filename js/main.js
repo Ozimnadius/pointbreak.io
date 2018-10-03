@@ -1,6 +1,7 @@
+/*ONE PAGE SCROLL*/
 $(function () {
 
-    let sections = $('section'),
+   /* let sections = $('section'),
         mainContent = $('.main'),
         inScroll = false,
         screen = 0;
@@ -86,5 +87,26 @@ $(function () {
         scrollToSection(screen);
 
 
+    });*/
+});
+/*END ONE PAGE SCROLL*/
+
+$(function () {
+    $('body').on('click', '.res__drop-open', function (e) {
+        e.preventDefault();
+
+        let button = $(this),
+            content = button.find('.res__item-content').html(),
+            drop = $('.res__drop'),
+            drop__content = drop.find('.res__drop-content');
+
+        drop__content.html(content);
+        drop.addClass('active');
+
+    });
+
+    $('.res__close').on('click', function (e) {
+        e.preventDefault();
+        $('.res__drop').removeClass('active');
     });
 });

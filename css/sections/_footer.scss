@@ -1,18 +1,28 @@
 .footer {
+  background-image: url(../images/bg/bg-third.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
   &__pointbreak {
     top: 110px;
+  }
+
+  &__content {
+    padding-top: vh(85);
+    padding-bottom: vh(265);
   }
 }
 
 .plans {
-  margin-bottom: 120px;
+  margin-bottom: vh(120);
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: vh(50);
   }
 
   &__list {
-    margin-bottom: 65px;
+    margin-bottom: vh(65);
   }
 
   &__subtitle {
@@ -22,18 +32,19 @@
 
     font-size: 18px;
     font-weight: 700;
-    line-height: lh(18px,26px);
+    line-height: lh(18px, 26px);
     text-transform: uppercase;
     text-align: center;
   }
 }
+
 .plan {
   @include col;
   @include size(12);
   padding: 0 40px;
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: vh(30);
     height: 56px;
   }
 
@@ -42,9 +53,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 2px solid rgba($button,.5);
+    border-bottom: 2px solid rgba($button, .5);
     padding-bottom: 10px;
-    margin-bottom: 45px;
+    margin-bottom: vh(45);
   }
 
   &__price {
@@ -63,13 +74,14 @@
 
   &__desc {
     color: $Dim-gray;
-    line-height: lh(16px,22px);
+    line-height: lh(16px, 22px);
 
     p {
+      margin-bottom: vh(20);
       &:last-child {
         margin-bottom: 0;
       }
-      margin-bottom: 20px;
+
     }
   }
 }
@@ -80,7 +92,7 @@
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: vh(20);
   }
 
   &__left {
@@ -94,7 +106,7 @@
   &__text {
     color: $Dim-gray2;
     font-weight: 700;
-    line-height: lh(16px,22px);
+    line-height: lh(16px, 22px);
     text-transform: uppercase;
     margin-right: 50px;
   }
@@ -120,6 +132,7 @@
     align-items: flex-end;
   }
 }
+
 .contact {
   font-size: 18px;
   font-weight: 700;

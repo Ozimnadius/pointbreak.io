@@ -1,11 +1,16 @@
 .about {
 
+  &__content {
+    padding-top: vh(130);
+    padding-bottom: vh(140);
+  }
+
   &__pointbreak {
     top: 120px;
   }
 
   &__title {
-    margin-bottom: 90px;
+    margin-bottom: vh(90);
   }
 
   /* left */
@@ -96,8 +101,8 @@
 
   &__title2 {
     font-size: 24px;
-    margin-top: 40px;
-    margin-bottom: 100px;
+    margin-top: vh(40);
+    margin-bottom: vh(100);
 
     &:after {
       width: 100px;
