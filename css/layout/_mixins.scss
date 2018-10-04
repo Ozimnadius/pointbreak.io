@@ -26,6 +26,12 @@
       padding-left: 30px;
       position: relative;
       margin-bottom: 40px;
+      font-size: rem($font-size);
+      @include sm-block {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        text-align: left;
+      };
 
       &:last-child {
         margin-bottom: 0;
@@ -40,8 +46,8 @@
         background: $button;
         position: absolute;
         left: 0;
-        top: 50%;
-        margin-top: -4.5px;
+        top: 5px;
+        //margin-top: -4.5px;
       }
     }
   }
@@ -62,6 +68,9 @@
       &:last-child {
         margin-bottom: 0;
       }
+      @include sm-block {
+        margin-bottom: 20px;
+      };
 
       &:before {
         counter-increment: myCounter;
@@ -69,8 +78,11 @@
         margin-right: 35px;
         opacity: 0.7;
         color: $button;
-        font-size: 40px;
+        font-size: rem(40px);
         font-weight: 700;
+        @include sm-block {
+          margin-right: 15px;
+        };
       }
     }
   }

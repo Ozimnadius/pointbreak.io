@@ -15,6 +15,9 @@
     @include lg-block {
       padding-bottom: 60px;
     };
+    @include sm-block {
+      padding-top: 50px;
+    };
   }
 }
 
@@ -23,15 +26,24 @@
   @include lg-block {
     margin-bottom: 130px;
   };
+  @include sm-block {
+    margin-bottom: 40px;
+  };
 
   &__title {
     margin-bottom: 50px;
+    @include sm-block {
+      margin-bottom: 40px;
+    };
   }
 
   &__list {
     margin-bottom: 65px;
     @include lg-block {
       margin-bottom: 75px;
+    };
+    @include sm-block {
+      margin-bottom: 50px;
     };
 
     .row {
@@ -57,6 +69,9 @@
     @include lg-block {
       font-size: 16px;
     };
+    @include sm-block {
+      font-size: 12px;
+    };
   }
 }
 
@@ -70,10 +85,19 @@
     margin-left: 50px;
     margin-right: 50px;
   };
+  @include size-sm(24);
+  @include sm-block {
+    margin-bottom: 45px;
+  };
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &__title {
     margin-bottom: 30px;
     height: 56px;
+    display: flex;
+    justify-content: center;
 
     @include lg-block {
       height: 34px;
@@ -81,7 +105,7 @@
     };
 
     &-img {
-
+      max-height: 100%;
     }
   }
 
@@ -141,6 +165,9 @@
     padding-top: 40px;
     padding-bottom: 120px;
   };
+  @include sm-block {
+    padding: 30px 15px;
+  };
 
   &__title {
     @include col;
@@ -153,6 +180,12 @@
     @include shift-lg-right(1);
     @include lg-block {
       font-size: 28px;
+    };
+    @include size-sm(24);
+    @include sm-block {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 30px;
     };
   }
 
@@ -167,6 +200,11 @@
     @include lg-block {
       text-align: right;
       margin-bottom: 25px;
+    };
+    @include size-sm(24);
+    @include sm-block {
+      text-align: center;
+      order: 1;
     };
   }
 
@@ -185,6 +223,11 @@
       font-size: 12px;
       order: 1;
     };
+    @include size-sm(24);
+    @include sm-block {
+      order: 2;
+      margin-bottom: 20px;
+    };
   }
 
   &__right {
@@ -197,6 +240,12 @@
     @include lg-block {
       align-items: flex-start;
     };
+    @include size-sm(24);
+    @include sm-block {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    };
   }
 }
 
@@ -206,6 +255,10 @@
   margin-bottom: 8px;
   @include lg-block {
     font-size: 16px;
+  };
+  @include sm-block {
+    font-size: 12px;
+    margin-bottom: 0;
   };
 
   &:last-child {

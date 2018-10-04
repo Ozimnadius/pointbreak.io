@@ -1,6 +1,6 @@
 .callorder {
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   top: 0;
   bottom: 0;
   left: 0;
@@ -34,9 +34,17 @@
     background-color: $bg;
     padding: 35px 40px;
     padding-bottom: 0;
-
     display: flex;
     flex-direction: column;
+    @include sm-block {
+      padding: 15px 20px;
+      padding-bottom: 0;
+    };
+    @include xs-block {
+      height: 100vh;
+      padding-top: 45px;
+      padding-bottom: 70px;
+    };
 
 
   }
@@ -53,6 +61,9 @@
     position: absolute;
     top: 40px;
     right: 35px;
+    @include xs-block {
+      top: 70px;
+    };
 
     &:hover {
       .callorder__close-svg {
@@ -72,14 +83,23 @@
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 25px;
+    @include xs-block {
+      margin-bottom: 20px;
+    };
   }
 
   &__fields {
     margin-bottom: 30px;
     width: 100%;
+    @include xs-block {
+      margin-bottom: 20px;
+    };
   }
   &__field {
     margin-bottom: 14px;
+    @include xs-block {
+      margin-bottom: 10px;
+    };
     &:last-child {
       margin-bottom: 0;
     }
@@ -88,12 +108,21 @@
   &__accept {
     margin-bottom: 45px;
     padding-left: 33px;
+    @include sm-block {
+      padding-left: 0;
+    };
+    @include xs-block {
+      margin-bottom: 20px;
+    };
   }
 
   &__submit {
     display: flex;
     justify-content: center;
     width: 100%;
+    @include sm-block {
+      margin-top: auto;
+    };
   }
 
   &__success {
@@ -118,6 +147,9 @@
   &_area {
     height: 112px;
     border-radius: 10px;
+    @include xs-block {
+      height: 80px;
+    };
   }
 }
 
@@ -136,7 +168,7 @@
 
   &__wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__label {
@@ -182,6 +214,14 @@
   transition: .3s;
   position: relative;
   cursor: pointer;
+  @include xs-block {
+    border-radius: 25px;
+  };
+
+  &.disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
 
 
   &:hover {

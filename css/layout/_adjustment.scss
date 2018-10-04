@@ -14,6 +14,9 @@ html {
   @include lg-block {
     font-size: 14px;
   };
+  @include sm-block {
+    font-size: 12px;
+  };
 }
 
 *, *:before, *:after {
@@ -68,7 +71,7 @@ ul {
 }
 
 section {
-  min-height: 100vh;
+  //min-height: 100vh;
   //overflow: hidden;
   /*>.container {
     height: 100%;

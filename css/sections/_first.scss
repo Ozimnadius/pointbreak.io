@@ -6,12 +6,36 @@
     @include lg-block {
       padding-top: 210px;
     };
+    @include sm-block {
+      padding-top: 110px;
+      padding-bottom: 20px;
+    };
   }
 
   &__pointbreak {
     top: 70px;
     @include lg-block {
       top: 90px;
+    };
+    @include sm-block {
+      display: block;
+      width: 29px;
+      height: 320px;
+      top: -85px;
+      left: 145px;
+
+      transform: rotate(90deg);
+
+    };
+  }
+
+  &__slogan {
+    @include col;
+    @include size(24);
+    display: none;
+    margin-bottom: 25px;
+    @include sm-block {
+      display: block;
     };
   }
 
@@ -29,6 +53,12 @@
       margin-left: 15px;
       padding: 35px 30px;
     };
+    @include size-sm(24);
+    @include sm-block {
+      padding: 15px;
+      margin-bottom: 20px;
+    };
+
 
     &:after {
       content: '';
@@ -61,6 +91,9 @@
       @include lg-block {
         font-size: 58px;
       };
+      @include sm-block{
+        font-size: 24px;
+      };
     }
 
     &-text {
@@ -69,6 +102,9 @@
       font-weight: 600;
       @include lg-block {
         font-size: 18px;
+      };
+      @include sm-block {
+        font-size: 14px;
       };
     }
   }
@@ -87,6 +123,12 @@
       padding-left: 30px;
       font-size: 16px;
     };
+    @include sm-block {
+      font-size: 12px;
+      text-transform: none;
+      padding-left: 20px;
+      margin-bottom: 85px;
+    };
   }
 
   &__text {
@@ -99,6 +141,15 @@
     @include lg-block {
       font-size: 18px;
       padding-left: 30px;
+    };
+    @include size-sm(24);
+    @include sm-block{
+      color: $button;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0 20px;
     };
   }
 }

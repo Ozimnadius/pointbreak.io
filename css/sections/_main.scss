@@ -3,9 +3,13 @@
   &__first {
     background-image: url(../images/bg/bg-first.jpg);
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: bottom center;
     position: relative;
     background-size: cover;
+    @include sm-block {
+      background-size: cover;
+      background-position: left 61% top -40px;
+    };
   }
 
   &__second {

@@ -7,6 +7,10 @@
       padding-top: 70px;
       padding-bottom: 110px;
     };
+    @include sm-block {
+      padding-top: 50px;
+      padding-bottom: 75px;
+    };
   }
 
   &__pointbreak {
@@ -20,6 +24,9 @@
     @include lg-block {
       margin-bottom: 45px;
     };
+    @include sm-block {
+      margin-bottom: 30px;
+    };
   }
 
   &__sub {
@@ -31,6 +38,10 @@
     margin-bottom: 20px;
     @include lg-block {
       font-size: 18px;
+    };
+    @include sm-block {
+      font-size: 11px;
+      margin-bottom: 14px;
     };
   }
 
@@ -46,6 +57,9 @@
     @include lg-block {
       font-size: 18px;
       margin-bottom: 22px;
+    };
+    @include sm-block {
+      font-size: 12px;
     };
   }
 
@@ -64,6 +78,10 @@
     @include lg-block {
       font-size: 14px;
     };
+    @include sm-block {
+      font-size: 12px;
+      margin-bottom: 25px;
+    };
   }
 
   &__items {
@@ -73,6 +91,9 @@
     position: relative;
     @include lg-block {
       margin-bottom: 70px;
+    };
+    @include sm-block {
+      margin-bottom: 40px;
     };
 
     .row {
@@ -85,13 +106,19 @@
     @include col;
     @include size(12);
     display: flex;
-
     align-items: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
     @include lg-block {
       margin-left: 50px;
       margin-right: 50px;
       width: calc(50% - 100px);
       flex-direction: column;
+    };
+    @include size-sm(24);
+    @include sm-block {
+      margin-bottom: 25px;
     };
 
     &-button {
@@ -104,6 +131,9 @@
         margin-bottom: 20px;
         margin-right: 0;
       };
+      @include sm-block {
+        width: 80%;
+      };
     }
     &-text {
       color: $button;
@@ -113,6 +143,10 @@
       text-transform: uppercase;
       @include lg-block {
         font-size: 12px;
+      };
+      @include sm-block {
+        font-size: 11px;
+        text-align: center;
       };
     }
 
@@ -133,12 +167,20 @@
     display: none;
     position: absolute;
     left: 0;
+    z-index: 200;
     width: 100%;
     top: calc(100% + 30px);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     background-color: rgba($bg,.95);
     padding: 40px 30px;
     border-radius: 5px;
+    @include sm-block {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    };
 
     &.active {
       display: block;
@@ -179,6 +221,9 @@
     @include shift-lg(0);
     @include lg-block {
       font-size: 14px;
+    };
+    @include sm-block {
+      font-size: 11px;
     };
   }
 }

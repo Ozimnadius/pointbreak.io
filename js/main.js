@@ -97,7 +97,6 @@ $(function () {
     const drop = $('.res__drop'),
         drop__content = drop.find('.res__drop-content');
 
-
     $('body').on('click', '.res__drop-open', function (e) {
         e.preventDefault();
 
@@ -111,6 +110,24 @@ $(function () {
     $('.res__close').on('click', function (e) {
         e.preventDefault();
         drop.removeClass('active');
+    });
+
+    const drop2 = $('.about__drop'),
+        drop2__content = drop2.find('.about__drop-content');
+
+    $('body').on('click', '.about__drop-open', function (e) {
+        e.preventDefault();
+
+        let button = $(this),
+            content = button.find('.about__item-content').html();
+
+        drop2__content.html(content);
+        drop2.addClass('active');
+    });
+
+    $('.about__close').on('click', function (e) {
+        e.preventDefault();
+        drop2.removeClass('active');
     });
     /*END DROPDOWN*/
 
@@ -152,6 +169,35 @@ $(function () {
     });
     /*END CALLORDER*/
 
+    /*MMENU*/
+    let mmenu = $('.mmenu'),
+        mmenuClose = $('.mmenu__close'),
+        mmenuButton = $('.mmenu-button');
+
+    mmenuButton.on('click', function (e) {
+        e.preventDefault();
+        mmenu.addClass('active');
+    });
+    mmenuClose.on('click', function (e) {
+        e.preventDefault();
+        mmenu.removeClass('active');
+    });
+
+    $('.mmenu__link').on('click', function (e) {
+
+        e.preventDefault();
+        let link = $(this),
+            id = link.attr('href'),
+            section = $(id),
+            scrollTop = section.offset().top - 50;
+
+        mmenu.removeClass('active');
+        $('body,html').animate({
+            scrollTop: scrollTop
+        }, 700)
+    });
+    /*END MMENU*/
+
     /*COMMON*/
     $('body').on('click', function (e) {
 
@@ -164,6 +210,19 @@ $(function () {
     });
 
     $('input[type=tel]').mask('+7 (999) 999-99-99');
+
+    $('.accept__check').on('change', function (e) {
+        let checked = $(this).prop('checked'),
+            form = $(this).closest('form'),
+            submit = form.find('.submit');
+
+        if (checked) {
+            submit.removeClass('disabled');
+        } else {
+            submit.addClass('disabled')
+        }
+
+    });
     /*END COMMON*/
 
 

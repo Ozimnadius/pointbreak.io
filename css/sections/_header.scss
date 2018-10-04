@@ -7,10 +7,25 @@
   @include lg-block {
     top: 40px;
   };
+  @include sm-block {
+    position: fixed;
+    z-index: 190;
+    top: 0;
+    background-color: #0c4e63;
+  };
 
   &__row {
     display: flex;
     flex-wrap: wrap;
+    @include sm-block {
+      align-items: center;
+    };
+  }
+
+  &__slogan {
+    @include sm-block {
+      display: none;
+    };
   }
 
   &__controls {
@@ -54,6 +69,10 @@
     @include lg-block {
       margin-right: 60px;
     };
+    @include sm-block {
+      margin-right: 0;
+      order: 1;
+    };
   }
 
   &__call {
@@ -68,6 +87,11 @@
     transition: .3s;
     @include lg-block {
       display: flex;
+    };
+    @include sm-block{
+      margin-right: 20px;
+      background-color: transparent;
+      box-shadow: none;
     };
 
     &:hover {
@@ -95,6 +119,14 @@
   @include lg-block {
     max-width: 445px;
     font-size: 13px;
+  };
+  @include sm-block {
+    font-size: 11px;
+    text-align: center;
+  };
+  @include sm-block {
+    max-width: 100%;
+    position: relative;
   };
 
   &_blue {
@@ -137,6 +169,9 @@
   margin-right: 35px;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
+  @include sm-block {
+    margin-right: 20px;
+  };
 
   &.active {
     border-color: $bg;
