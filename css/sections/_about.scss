@@ -43,7 +43,7 @@
     @include lg-block {
       padding-top: 0;
       position: relative;
-      z-index: 200;
+      z-index: 20;
     }
   ;
     @include size-sm(24);
@@ -316,6 +316,9 @@
   &__drop {
     display: none;
     position: absolute;
+    @include col;
+    @include size(12);
+    @include size-lg(15);
     left: 0;
     top: 0;
     z-index: 200;
@@ -325,10 +328,13 @@
     border-radius: 5px;
     @include sm-block {
       position: fixed;
+      z-index: 210;
       left: 0;
       right: 0;
       bottom: 0;
       top: 0;
+      width: 100%;
+      margin: 0;
     };
 
     &.active {
