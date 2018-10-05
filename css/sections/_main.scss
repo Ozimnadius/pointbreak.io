@@ -20,6 +20,9 @@
     @include lg-block{
       background-size: auto;
     };
+    @include sm-block {
+      background-position: center bottom -70px;
+    };
   }
 
 }

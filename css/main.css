@@ -596,6 +596,9 @@ img {
   @media screen and (max-width: 1199.99px) {
     .main__second {
       background-size: auto; } }
+  @media screen and (max-width: 767.99px) {
+    .main__second {
+      background-position: center bottom -70px; } }
 
 /*-----------------SECTION-FIRST--------------------*/
 .first__content {
