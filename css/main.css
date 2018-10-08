@@ -371,10 +371,12 @@ img {
 
 .pointbreak {
   position: absolute;
-  right: calc(100% + 75px); }
+  right: calc(100% + 75px);
+  width: 76px; }
   @media screen and (max-width: 1199.99px) {
     .pointbreak {
-      right: calc(100% + 22px); }
+      right: calc(100% + 22px);
+      width: 60px; }
       .pointbreak img {
         width: 60px; } }
   @media screen and (max-width: 767.99px) {

@@ -56,9 +56,13 @@
 .pointbreak {
   position: absolute;
   right: calc(100% + 75px);
+  width: 76px;
+
+
 
   @include lg-block {
     right:calc(100% + 22px);
+    width: 60px;
     img {
       width: 60px;
     }
