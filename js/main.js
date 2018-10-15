@@ -184,7 +184,6 @@ $(function () {
     });
 
     $('.mmenu__link').on('click', function (e) {
-
         e.preventDefault();
         let link = $(this),
             id = link.attr('href'),
@@ -194,7 +193,7 @@ $(function () {
         mmenu.removeClass('active');
         $('body,html').animate({
             scrollTop: scrollTop
-        }, 700)
+        }, 700);
     });
     /*END MMENU*/
 
