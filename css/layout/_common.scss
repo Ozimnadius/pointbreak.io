@@ -58,11 +58,14 @@
   right: calc(100% + 75px);
   width: 76px;
 
-
-
+  @include xlg-block {
+    right: initial;
+    left: -60px;
+  };
   @include lg-block {
     right:calc(100% + 22px);
     width: 60px;
+    left: initial;
     img {
       width: 60px;
     }
@@ -71,6 +74,12 @@
   @include sm-block{
     display: none;
   };
+
+  &__img {
+    @include xlg-block {
+      width: 80%;
+    };
+  }
 }
 
 .drop {

@@ -12,6 +12,9 @@
   &__content {
     padding-top: 85px;
     padding-bottom: 90px;
+    @include xlg-block {
+      padding-top: 60px;
+    };
     @include lg-block {
       padding-bottom: 60px;
     };
@@ -23,6 +26,9 @@
 
 .plans {
   margin-bottom: 50px;
+  @include xlg-block {
+    margin-bottom: 100px;
+  };
   @include lg-block {
     margin-bottom: 130px;
   };
@@ -32,6 +38,9 @@
 
   &__title {
     margin-bottom: 50px;
+    @include xlg-block {
+      font-size: 24px;
+    };
     @include sm-block {
       margin-bottom: 40px;
     };
@@ -99,6 +108,9 @@
     display: flex;
     justify-content: center;
 
+    @include xlg-block{
+      height: 38px;
+    };
     @include lg-block {
       height: 34px;
       margin-bottom: 20px;

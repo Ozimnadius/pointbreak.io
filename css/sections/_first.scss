@@ -1,9 +1,22 @@
 .first {
 
+  >.container {
+    @include xlg-block {
+      padding-left: 95px;
+    };
+    @include lg-block {
+      padding-left: 15px;
+    };
+  }
+
   &__content {
     padding-top:270px;
     padding-bottom: 310px;
+    @include xlg-block {
+      padding-bottom: 140px;
+    };
     @include lg-block {
+      padding-bottom: 310px;
       padding-top: 210px;
     };
     @include sm-block {
@@ -14,6 +27,9 @@
 
   &__pointbreak {
     top: 70px;
+    @include xlg-block {
+      top: 60px;
+    };
     @include lg-block {
       top: 90px;
     };
@@ -48,6 +64,7 @@
     margin-bottom: 35px;
     position: relative;
     cursor: pointer;
+    @include size-xlg(18);
     @include size-lg(20);
     @include lg-block {
       margin-left: 15px;
@@ -118,10 +135,15 @@
     text-transform: uppercase;
     margin-bottom: 196px;
     line-height: 1.42;
+    @include size-xlg(18);
+    @include xlg-block {
+      margin-bottom: 90px;
+    };
     @include size-lg(18);
     @include lg-block {
       padding-left: 30px;
       font-size: 16px;
+      margin-bottom: 196px;
     };
     @include sm-block {
       font-size: 12px;
